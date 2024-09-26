@@ -1,7 +1,5 @@
 # Weather-and-Sales-Prediction-Analysis
 
-# Weather and Sales Prediction Analysis
-
 This repository contains data and initial models built to analyse how weather affects Irish fast food sales. Data was gathered from two restaurants within the Midlands region of Ireland, spanning from May 2021 to May 2024.
 
 ## Project Overview
