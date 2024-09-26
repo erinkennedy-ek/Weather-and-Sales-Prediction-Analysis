@@ -1,34 +1,51 @@
 # Weather-and-Sales-Prediction-Analysis
 
-This repository contains data and initial models built to analyse how weather affects Irish fast food sales. Data was gathered from two restaurants within the Midlands region of Ireland, spanning from May 2021 to May 2024.
+This repository contains data, R scripts, and initial models built to analyse how weather affects Irish fast food sales. The analysis uses both random forest and linear regression models. Data is sourced from two Midlands fast food restaurants, spanning May 2021 to May 2024
 
 ## Project Overview
 
-The analysis involves two key datasets:
+The analysis involves two key datasets and four primary R scripts:
 
+### Datasets:
 1. **Weather_Sales_2021_24.csv**:
-   - This dataset contains daily sales data from two fast-food restaurants between 2021 and 2024. It also includes weather parameters like temperature, humidity, wind speed, etc.
-   - The goal of this dataset was to build **Random Forest models** to determine if fast food sales can be predicted by sales patterns and weather conditions.
+   - Daily sales data from two fast food restaurants (2021-2024), along with weather data.
+   - Used for Random Forest modelling to predict sales based on weather.
 
 2. **Product_Sales_Transposed.csv**:
-   - This dataset contains sales information for various product categories within one of the restaurants. It was used to analyse which weather variables most significantly impact the sales of individual products.
-   - **Linear regression models** were applied to identify the important weather factors affecting each product's sales.
+   - Contains categories of products sold in one of the restaurants.
+   - Used for linear regression analysis to determine how weather affects individual product sales.
 
-## Models and Approach
+### R Scripts:
+1. **Customer_Behaviour_Product_Linear_Regression.R**:
+   - Contains linear regression models for each product category to identify important weather variables influencing sales.
 
-- The Random Forest models were built and optimised using optimal mtry values and ntree. Further optimisation can still be undertaken for better accuracy in predicting sales based on weather.
-- The Linear Regression models also need refinement to fully capture the effect of weather variables on product-level sales.
+2. **Correlation_Matrix.R**:
+   - Provides visualisations such as scatterplot matrices and correlation matrices to analyse relationships between product sales and weather variables.
+
+3. **Customer_Behaviour_Model_Performance_Metrics.R**:
+   - Produces a graphic (dual-axis barplot and lineplot) showing the performance metrics (MAE, RMSE, R-squared) of the Random Forest models used in the analysis.
+
+4. **Customer_Pref_Random_Forest.R**:
+   - Contains the code to build and evaluate five Random Forest models, designed to predict customer preferences and sales based on weather and sales patterns.
+   - The most impressive four models are discussed in the thesis.
+
+## Model Performance Summary
+
+- The Random Forest models show varying accuracy, with performance metrics such as Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and R-squared values compared across different models.
+- The linear regression models helped identify which weather variables (e.g., temperature, humidity) were most influential for individual product categories.
 
 ## How to Use
 
-1. **Random Forest Models**: 
-   - Load the `Weather_Sales_2021_24.csv` dataset into R or Python environment.
-   - Build and optimise the Random Forest model to predict daily sales based on weather features.
-
-2. **Linear Regression**:
-   - Use the `Product_Sales_Transposed.csv` file to conduct regression analysis to explore how weather influences the sales of individual product categories.
+1. **Data**: Load the `Weather_Sales_2021_24.csv` and `Product_Sales_Transposed.csv` datasets into R.
+2. **Run Models**:
+   - Use the **Customer_Behaviour_Product_Linear_Regression.R** script to replicate the linear regression analysis on product sales.
+   - Use **Customer_Pref_Random_Forest.R** to build the Random Forest models. 
+3. **Visualisations**: Evaluate by inserting metrics into **Customer_Behaviour_Model_Performance_Metrics.R** from Random Forest models. Use **Correlation_Matrix.R** to explore the relationship between product/weather variables visually.
 
 ## Future Work
+
+- Further optimisation of both the Random Forest and Linear Regression models is necessary.
+- Explore feature engineering techniques to improve the prediction accuracy of weather's effect on sales.
 
 - Model improvements are required for both Random Forest and Linear Regression models to make them more robust and predictive.
 - Feature engineering and hyperparameter tuning should be applied to the Random Forest models to achieve higher predictive power.
