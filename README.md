@@ -45,7 +45,5 @@ The analysis involves two key datasets and four primary R scripts:
 ## Future Work
 
 - Further optimisation of both the Random Forest and Linear Regression models is necessary.
-- Explore feature engineering techniques to improve the prediction accuracy of weather's effect on sales.
 
-- Model improvements are required for both Random Forest and Linear Regression models to make them more robust and predictive.
 - Feature engineering and hyperparameter tuning should be applied to the Random Forest models to achieve higher predictive power.
